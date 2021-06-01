@@ -59,14 +59,8 @@
     --mb-4: 2rem;
     --mb-5: 2.5rem;
     --mb-6: 3rem;
-
-    //z-index
-    --z-back: -10;
-    --z-normal: 1;
-    --z-tooltip: 10;
-    --z-fixed: 100;
-    --z-modal: 1000;
 }
+
 /* --**BASIC**-- */
 
 *,
@@ -116,7 +110,6 @@ a {
         margin-bottom: var(--mb-2);
     }
     &__description {
-        // display: block;
         font-size: var(--normal-font-size);
         margin-bottom: var(--mb-3);
     }
@@ -146,6 +139,7 @@ a {
 .first__data {
     padding: 0 1rem;
 }
+
 /* --**SECOND DATA**-- */
 .second__data {
     width: 80%;
@@ -153,6 +147,7 @@ a {
     box-shadow: 0 6px 0 rgba(14, 13, 13, 0.192);
     border-radius: 0.5rem;
 }
+
 /* --**FORM**-- */
 .form {
     background-color: #fff;
@@ -168,8 +163,6 @@ a {
         border: 1px solid var(--text-color-light);
         font-size: var(--normal-font-size);
         border-radius: 0.225rem;
-        // border-bottom-width: 2px;
-        outline: none;
 
         &::placeholder {
             font-weight: var(--font-semi);
@@ -252,9 +245,8 @@ a {
     }
 }
 
-/* --**FOOTER**-- */
-
 /* --**MEDIA QUERIES**-- */
+
 // for medium devices
 @media screen and (min-width: 568px) {
     .main {
@@ -296,10 +288,3 @@ a {
         max-width: 1224px;
     }
 }
-
-// for small devices
-// @media screen and (max-width: 350px) {
-//     .container {
-//         grid-template-columns: max-content;
-//     }
-// }

@@ -54,11 +54,6 @@
   --mb-4: 2rem;
   --mb-5: 2.5rem;
   --mb-6: 3rem;
-  --z-back: -10;
-  --z-normal: 1;
-  --z-tooltip: 10;
-  --z-fixed: 100;
-  --z-modal: 1000;
 }
 
 @media screen and (min-width: 968px) {
@@ -190,7 +185,6 @@ a {
   border: 1px solid var(--text-color-light);
   font-size: var(--normal-font-size);
   border-radius: 0.225rem;
-  outline: none;
 }
 
 .form input::-webkit-input-placeholder {
@@ -299,7 +293,6 @@ a {
   color: #fff;
 }
 
-/* --**FOOTER**-- */
 /* --**MEDIA QUERIES**-- */
 @media screen and (min-width: 568px) {
   .main {

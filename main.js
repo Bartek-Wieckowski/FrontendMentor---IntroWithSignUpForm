@@ -1,3 +1,5 @@
+// access to necessary variables
+
 const form = document.querySelector(".form");
 
 const firstNField = document.querySelector(".first-name");
@@ -11,6 +13,8 @@ const emailInput = emailField.querySelector("input");
 
 const passwordField = document.querySelector(".password");
 const passwordInput = passwordField.querySelector("input");
+
+// form - many actions after wrong filling - empty inputs
 
 form.onsubmit = (event) => {
   event.preventDefault();
@@ -29,13 +33,15 @@ form.onsubmit = (event) => {
   } else {
     checkEmail();
   }
-
+  // After 400ms there will be a shake effect again, when inputs still fill wrong
   setTimeout(() => {
     firstNField.classList.remove("shake");
     lastNField.classList.remove("shake");
     emailField.classList.remove("shake");
     passwordField.classList.remove("shake");
   }, 400);
+
+  //   email verification
 
   function checkEmail() {
     let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
@@ -44,18 +50,15 @@ form.onsubmit = (event) => {
       emailField.classList.add("error");
       let errorTxt = emailField.querySelector(".error-text");
       if (emailInput.value != "") {
-        errorTxt.innerText = "Enter a valid email address";
-      } else {
         errorTxt.innerText = "Looks like this is not an email";
+        emailField.classList.add("shake");
+      } else {
+        errorTxt.innerText = "Enter a valid email address";
       }
     } else {
       emailField.classList.remove("error");
     }
   }
-
-  emailInput.onkeyup = () => {
-    checkEmail();
-  };
 
   firstNInput.onkeyup = () => {
     if (firstNInput.value == "") {
@@ -73,6 +76,10 @@ form.onsubmit = (event) => {
     }
   };
 
+  emailInput.onkeyup = () => {
+    checkEmail();
+  };
+
   passwordInput.onkeyup = () => {
     if (passwordInput.value == "") {
       passwordField.classList.add("error");
@@ -80,4 +87,14 @@ form.onsubmit = (event) => {
       passwordField.classList.remove("error");
     }
   };
+  // validation when the form will be sent
+  if (
+    !firstNField.classList.contains("error") &&
+    !lastNField.classList.contains("error") &&
+    !emailField.classList.contains("error") &&
+    !passwordField.classList.contains("error")
+  ) {
+    window.location.href = "#";
+    console.log("Form SUBMITTED");
+  }
 };
