@@ -1,6 +1,19 @@
 // GOOGLE FONTS
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-
+@keyframes shake {
+    0%,
+    100% {
+        margin-left: 0;
+    }
+    20%,
+    80% {
+        margin-left: -12px;
+    }
+    40%,
+    60% {
+        margin-left: 12px;
+    }
+}
 /* --**VARIABLES CSS**-- */
 :root {
     // colors
@@ -156,6 +169,7 @@ a {
         font-size: var(--normal-font-size);
         border-radius: 0.225rem;
         // border-bottom-width: 2px;
+        outline: none;
 
         &::placeholder {
             font-weight: var(--font-semi);
@@ -174,6 +188,48 @@ a {
             }
         }
     }
+    .field {
+        width: 100%;
+        margin-bottom: 1rem;
+
+        & i {
+            position: absolute;
+            top: 50%;
+            font-size: 1.25rem;
+            pointer-events: none;
+            transform: translateY(-50%);
+        }
+        .error {
+            // display: none;
+            &--icon {
+                right: 15px;
+                color: #dc3545;
+            }
+            &-text {
+                color: #dc3545;
+                text-align: right;
+                margin-top: 0.5rem;
+            }
+        }
+        &.shake {
+            animation: shake 0.3s ease-in-out infinite;
+        }
+    }
+}
+.form .field.error .error {
+    display: block;
+}
+.form .field.error input {
+    border-color: #dc3545;
+}
+.agree {
+    color: var(--text-color-light);
+    font-size: var(--small-font-size);
+    text-align: center;
+    &--term {
+        color: #dc3545;
+        font-weight: var(--font-semi);
+    }
 }
 
 /* --**BUTTONS**-- */
@@ -183,12 +239,16 @@ a {
     padding: 1rem 1rem;
     margin-bottom: var(--mb-3);
     border-radius: 0.5rem;
+    color: var(--text-color-light);
 
     &--blue {
         background-color: var(--color-accent);
-        color: #fff;
         text-align: center;
         box-shadow: 0 6px 0 rgba(14, 13, 13, 0.192);
+
+        & strong {
+            color: #fff;
+        }
     }
 }
 
