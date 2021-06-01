@@ -36,4 +36,20 @@ form.onsubmit = (event) => {
     emailField.classList.remove("shake");
     passwordField.classList.remove("shake");
   }, 400);
+
+  function checkEmail() {
+    let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    if (!emailInput.value.match(pattern)) {
+      emailField.classList.add("error");
+      let errorTxt = emailField.querySelector(".error-text");
+      if (emailInput.value != "") {
+        errorTxt.innerText = "Enter a valid email address";
+      } else {
+        errorTxt.innerText = "Looks like this is not an email";
+      }
+    } else {
+      emailField.classList.remove("error");
+    }
+  }
 };
