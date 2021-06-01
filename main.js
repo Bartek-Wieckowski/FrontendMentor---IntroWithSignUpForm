@@ -52,4 +52,32 @@ form.onsubmit = (event) => {
       emailField.classList.remove("error");
     }
   }
+
+  emailInput.onkeyup = () => {
+    checkEmail();
+  };
+
+  firstNInput.onkeyup = () => {
+    if (firstNInput.value == "") {
+      firstNField.classList.add("error");
+    } else {
+      firstNField.classList.remove("error");
+    }
+  };
+
+  lastNInput.onkeyup = () => {
+    if (lastNInput.value == "") {
+      lastNField.classList.add("error");
+    } else {
+      lastNField.classList.remove("error");
+    }
+  };
+
+  passwordInput.onkeyup = () => {
+    if (passwordInput.value == "") {
+      passwordField.classList.add("error");
+    } else {
+      passwordField.classList.remove("error");
+    }
+  };
 };
