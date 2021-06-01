@@ -94,27 +94,25 @@ ul {
 a {
     text-decoration: none;
 }
-img {
-    max-width: 100%;
-    height: auto;
-    //display: block;
-}
 
 /* --**CSS CLASS**-- */
 .section {
-    padding: 2rem 0 4rem;
+    padding: 4rem 0 2rem;
     &__title {
         font-size: var(--h1-font-size);
+        font-weight: var(--font-bold);
+        margin-bottom: var(--mb-2);
     }
-    &__subtitle {
-        display: block;
-        font-size: var(--small-font-size);
+    &__description {
+        // display: block;
+        font-size: var(--normal-font-size);
         margin-bottom: var(--mb-3);
     }
 }
 .section__title,
-.section__subtitle {
+.section__description {
     text-align: center;
+    color: #fff;
 }
 
 /* --**LAYOUT**-- */
@@ -127,8 +125,43 @@ img {
     display: grid;
     gap: 1.5rem;
 }
+.main {
+    background: url(/images/bg-intro-mobile.png) var(--frist-color) no-repeat center;
+}
+
+/* --**FIRST DATA**-- */
+.first__data {
+    padding: 0 1rem;
+}
+/* --**SECOND DATA**-- */
+.second__data {
+    width: 80%;
+    justify-self: center;
+    box-shadow: 0 6px 0 rgba(14, 13, 13, 0.192);
+    border-radius: 0.5rem;
+}
+/* --**FORM**-- */
+.form {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+}
 
 /* --**BUTTONS**-- */
+.button {
+    display: inline-block;
+    width: 100%;
+    padding: 1rem 1rem;
+    margin-bottom: var(--mb-3);
+    border-radius: 0.5rem;
+
+    &--blue {
+        background-color: var(--color-accent);
+        color: #fff;
+        text-align: center;
+        box-shadow: 0 6px 0 rgba(14, 13, 13, 0.192);
+    }
+}
 
 /* --**FOOTER**-- */
 
