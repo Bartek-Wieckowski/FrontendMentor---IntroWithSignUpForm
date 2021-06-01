@@ -145,6 +145,35 @@ a {
     background-color: #fff;
     border-radius: 0.5rem;
     padding: 1rem 1.5rem;
+    .field .input-area {
+        position: relative;
+    }
+    & input {
+        height: 3rem;
+        width: 100%;
+        padding: 0 1rem;
+        border: 1px solid var(--text-color-light);
+        font-size: var(--normal-font-size);
+        border-radius: 0.225rem;
+        // border-bottom-width: 2px;
+
+        &::placeholder {
+            font-weight: var(--font-semi);
+        }
+        &[type="submit"] {
+            margin-top: var(--mb-2);
+            border: none;
+            background: var(--first-color-send);
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            margin-bottom: var(--mb-1);
+            text-transform: uppercase;
+            &:hover {
+                background: hsl(154, 94%, 35%);
+            }
+        }
+    }
 }
 
 /* --**BUTTONS**-- */

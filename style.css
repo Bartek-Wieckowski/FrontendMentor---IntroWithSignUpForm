@@ -150,6 +150,51 @@ a {
   padding: 1rem 1.5rem;
 }
 
+.form .field .input-area {
+  position: relative;
+}
+
+.form input {
+  height: 3rem;
+  width: 100%;
+  padding: 0 1rem;
+  border: 1px solid var(--text-color-light);
+  font-size: var(--normal-font-size);
+  border-radius: 0.225rem;
+}
+
+.form input::-webkit-input-placeholder {
+  font-weight: var(--font-semi);
+}
+
+.form input:-ms-input-placeholder {
+  font-weight: var(--font-semi);
+}
+
+.form input::-ms-input-placeholder {
+  font-weight: var(--font-semi);
+}
+
+.form input::placeholder {
+  font-weight: var(--font-semi);
+}
+
+.form input[type="submit"] {
+  margin-top: var(--mb-2);
+  border: none;
+  background: var(--first-color-send);
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: background 0.2s ease;
+  transition: background 0.2s ease;
+  margin-bottom: var(--mb-1);
+  text-transform: uppercase;
+}
+
+.form input[type="submit"]:hover {
+  background: #05ad64;
+}
+
 /* --**BUTTONS**-- */
 .button {
   display: inline-block;
