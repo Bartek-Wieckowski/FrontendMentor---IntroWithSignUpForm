@@ -131,7 +131,7 @@ a {
     gap: 1.5rem;
 }
 .main {
-    background-image: url("/images/bg-intro-mobile.png") var(--frist-color) no-repeat center;
+    background-image: url("../images/bg-intro-mobile.png") var(--frist-color) no-repeat center;
     min-height: 100vh;
 }
 
@@ -250,7 +250,7 @@ a {
 // for medium devices
 @media screen and (min-width: 568px) {
     .main {
-        background: url("/images/bg-intro-desktop.png") var(--frist-color) no-repeat center;
+        background: url("../images/bg-intro-desktop.png") var(--frist-color) no-repeat center;
     }
     .container {
         max-width: 568px;
