@@ -250,7 +250,7 @@ a {
 // for medium devices
 @media screen and (min-width: 568px) {
     .main {
-        background: url(images/bg-intro-desktop.png) var(--frist-color) no-repeat center;
+        background: url("images/bg-intro-desktop.png") var(--frist-color) no-repeat center;
     }
     .container {
         max-width: 568px;
