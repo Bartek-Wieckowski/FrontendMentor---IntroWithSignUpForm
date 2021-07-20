@@ -72,7 +72,7 @@
 ::before,
 ::after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -148,7 +148,8 @@ a {
 }
 
 .main {
-  background-image: url("./images/bg-intro-mobile.png") var(--frist-color) no-repeat center;
+  background: url("./images/bg-intro-mobile.png") var(--frist-color) no-repeat
+    center;
   min-height: 100vh;
 }
 
@@ -161,9 +162,9 @@ a {
 .second__data {
   width: 80%;
   -ms-grid-column-align: center;
-      justify-self: center;
+  justify-self: center;
   -webkit-box-shadow: 0 6px 0 rgba(14, 13, 13, 0.192);
-          box-shadow: 0 6px 0 rgba(14, 13, 13, 0.192);
+  box-shadow: 0 6px 0 rgba(14, 13, 13, 0.192);
   border-radius: 0.5rem;
 }
 
@@ -230,7 +231,7 @@ a {
   font-size: 1.25rem;
   pointer-events: none;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .form .field .error {
@@ -250,7 +251,7 @@ a {
 
 .form .field.shake {
   -webkit-animation: shake 0.3s ease-in-out;
-          animation: shake 0.3s ease-in-out;
+  animation: shake 0.3s ease-in-out;
 }
 
 .form .field.error .error {
@@ -286,7 +287,7 @@ a {
   background-color: var(--color-accent);
   text-align: center;
   -webkit-box-shadow: 0 6px 0 rgba(14, 13, 13, 0.192);
-          box-shadow: 0 6px 0 rgba(14, 13, 13, 0.192);
+  box-shadow: 0 6px 0 rgba(14, 13, 13, 0.192);
 }
 
 .button--blue strong {
@@ -296,7 +297,8 @@ a {
 /* --**MEDIA QUERIES**-- */
 @media screen and (min-width: 568px) {
   .main {
-    background: url("./images/bg-intro-desktop.png") var(--frist-color) no-repeat center;
+    background: url("./images/bg-intro-desktop.png") var(--frist-color)
+      no-repeat center;
   }
   .container {
     max-width: 568px;
@@ -307,15 +309,15 @@ a {
 
 @media screen and (min-width: 768px) {
   .container {
-    -ms-grid-columns: (minmax(220px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    -ms-grid-columns: (minmax(220px, 1fr)) [auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     padding: 0 3rem;
     max-width: 968px;
   }
   .first__data {
     -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    -ms-grid-row-align: center;
+    align-self: center;
   }
   .section__description,
   .section__title {
@@ -331,8 +333,8 @@ a {
 
 @media screen and (min-width: 1024px) {
   .container {
-    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    -ms-grid-columns: (minmax(300px, 1fr)) [auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     max-width: 1224px;
   }
 }
